@@ -6,6 +6,12 @@ import { TopbarComponent } from './components/topbar/topbar.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HeroComponent } from './components/hero/hero.component';
+import { CriarTopicoComponent } from './components/criar-topico/criar-topico.component';
+import { FormTopicoComponent } from './components/form-topico/form-topico.component';
+import { EnviarTopicoComponent } from './components/enviar-topico/enviar-topico.component';
+import { BottomPostsComponent } from './components/bottom-posts/bottom-posts.component';
+import { FormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
@@ -13,13 +19,18 @@ import { HeroComponent } from './components/hero/hero.component';
     TopbarComponent,
     SidebarComponent,
     FooterComponent,
-    HeroComponent
+    HeroComponent,
+    CriarTopicoComponent,
+    FormTopicoComponent,
+    EnviarTopicoComponent,
+    BottomPostsComponent
 
 
 
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
