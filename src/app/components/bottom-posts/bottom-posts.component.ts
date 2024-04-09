@@ -1,15 +1,23 @@
 import { Component, OnInit } from '@angular/core';
-
+import { TopicService } from 'src/app/topic.service';
 @Component({
   selector: 'app-bottom-posts',
   templateUrl: './bottom-posts.component.html',
-  styleUrls: ['./bottom-posts.component.scss']
-})
+  })
 export class BottomPostsComponent implements OnInit {
 
-  constructor() { }
+  exibirRespostas = false;
+
+  toggleRespostas() {
+    this.exibirRespostas = !this.exibirRespostas;
+  }
+
+  topics: any[] = [];
+
+  constructor(private topicService: TopicService) {}
 
   ngOnInit(): void {
+    this.topics = this.topicService.getAllTopics();
   }
 
 }
