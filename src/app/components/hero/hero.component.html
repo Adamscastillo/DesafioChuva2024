@@ -81,11 +81,11 @@
             </div>
             <div class="font-thin text-[15px] tracking-wide p-4">
                 <div class="">
-                    <p class=""> {{initialText}} <button class="btn-show-more" (click)="toggleExpansion()">{{ expanded ? "": "ver mais"}}</button></p>
+                    <p class=""> {{initialText}} <button class="btn-show-more text-orange-600" (click)="toggleExpansion()">{{ expanded ? "": "ver mais"}}</button></p>
                     <div class="duration-600" *ngIf="expanded">
                         <p class="py-8"> {{ expandedText1 }} </p>
                         <p class="pb-8"> {{ expandedText2 }} </p>
-                        <p> {{ expandedText3 }} <button class="btn-show-more" (click)="toggleExpansion()">ver menos</button></p>
+                        <p> {{ expandedText3 }} <button class="btn-show-more text-orange-600" (click)="toggleExpansion()">ver menos</button></p>
                     </div>
                 </div>
             </div>
