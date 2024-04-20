@@ -22,5 +22,5 @@ jobs:
       - name: Install build
         run: npm run build
 
-      - name: Install test
+      - name: test E2E
         run: npm test --if-present
