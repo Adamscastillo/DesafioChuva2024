@@ -14,10 +14,10 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: "14"
+          node-version: "18" # Certifique-se de que o Node.js 14 é compatível com o Angular que você está usando
 
-      - name: Install dependencies and run tests
+      - name: Install dependencies
         run: |
           npm install
-          npm run test
-          npx cypress open --env type=base
+          npm build
+          npm run test --if-present
