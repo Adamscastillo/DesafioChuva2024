@@ -1,6 +1,6 @@
 name: Pull Request Workflow
 
-on: [pull_request, push]
+on: [push]
 
 jobs:
   build:
@@ -9,12 +9,12 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
 
       - name: Setup Node.js
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v4
         with:
-          node-version: "18" # Certifique-se de que o Node.js 14 é compatível com o Angular que você está usando
+          node-version: "16"
 
       - name: Install dependencies
         run: npm install
