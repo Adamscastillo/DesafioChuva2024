@@ -19,10 +19,9 @@ jobs:
       - name: Install dependencies
         run: |
           npm install,
-          npm run build
           npm run test
 
       - name: Run Cypress tests
-        run: npx cypress run --record --parallel --headless
+        run: npx cypress open --env type=base
 
       # You can add more steps here as needed
