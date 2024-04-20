@@ -18,7 +18,10 @@ jobs:
           node-version: "14"
 
       - name: Install dependencies
-        run: npm install
+        run: |
+          npm install,
+          npm run build
+          npm run test
 
       - name: Run Cypress tests
         run: npx cypress run --record --parallel --headless
